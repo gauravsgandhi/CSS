@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+	
+/* Make the image fit the box */
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="boxshadow">
+  <img src="Amazing_Best_Living_Room_House_Interior_HD_Photos.jpg" alt="Norway" width="600" height="400">
+</div>
+
+</body>
+</html>
